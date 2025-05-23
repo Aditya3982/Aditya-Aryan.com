@@ -1,0 +1,842 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: "Comic Relief", system-ui;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    font-family: "Sen", sans-serif;
+    font-weight: bold;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    color: white;
+}
+
+.search_user{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_user input{
+   padding: 3px 10px;
+   border-radius: 20px;
+   border: none;
+   outline: none;
+   background: rgba(255, 255, 255, .2);
+   color: white;
+   width: 200px;
+   margin-right: 10px;
+   font-weight: 500;
+}
+
+.search_user input::placeholder{
+  color: white;
+   
+}
+
+.search_user .search{
+    position: absolute;
+    width: 320px;
+    height: 240px;
+   /* border: 1px solid #fff;*/
+    right: 0px;
+    top: 35px;
+    z-index: 99999;
+    overflow-y: auto;
+}
+
+.search_user .search::-webkit-scrollbar{
+    width: 3px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.search_user .search::-webkit-scrollbar-thumb{
+    width: 3px;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.search_user .search:hover::-webkit-scrollbar{
+    visibility: visible;
+}
+
+.search_user .search:hover::-webkit-scrollbar-thumb{
+   
+    visibility: visible;
+}
+
+.search_user .search .card{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+    display: none;
+    }
+
+.search_user .search .card::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.search_user .search .card .search-img{
+    width: 60px;
+    height: 50px;
+    border-radius: 2px;
+    margin-left: 8px;
+}
+
+.search_user .search .card .cont{
+    margin-left: 10px;
+    color: #fff;
+ font-family: "Comic Relief", system-ui;
+     font-size: 12px;
+
+}
+
+.logo-container{
+flex: 1;
+}
+
+.logo{
+    font-family: "Sen", sans-serif;
+    font-size: 30px;
+    color: red;
+    align-items: center;
+    padding-left: 50px;
+  }
+
+.menu-container{
+    flex: 6;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    }
+
+    .menu-list-items{
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    color: #fff;
+    border: none;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.menu-list-items:hover ,
+.menu-list-items:focus{
+    background-color: #333;
+    color: #aaa;
+    text-decoration: none;
+    border-radius: 5px;
+}
+    
+
+
+  
+.profile-container{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        }
+
+        .profile-text-container{
+            margin: 0 20px;
+        }
+
+    .profile-picture{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .toggle{
+        width: 40px;
+        height: 20px;
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .toggle-icon{
+        color:gold ;
+    }
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color:black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.container{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.featured-title-entertainment{
+    font-size: 80px;
+    margin-bottom: 60px;
+    color: color-mix(in srgb, black 90%, brown 60%);
+    font-family: "Comic Relief", system-ui;
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-title{
+    font-size: 50px;
+    margin-bottom: 60px;
+    color: color-mix(in srgb-linear, gold 80%, #333 30%);
+    font-family: "Comic Relief", system-ui;
+}
+
+.featured-desc{
+    width: 500px;
+    color: darkgray;
+    margin-top: 250px 0;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.featured-button{
+    background:  linear-gradient(90deg, #00bdff, #0079ff);
+    color:white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 150px 0;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 50px;
+    border: none;
+    animation: button 1s linear infinite;
+}
+
+#trailerIframe{
+    width: 100%;
+    height: 100%;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button:hover ,
+.close-button:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe1{
+    width: 100%;
+    height: 100%;
+}
+
+.modal1{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content1{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button1{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button1:hover ,
+.close-button1:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe2{
+    width: 100%;
+    height: 100%;
+}
+
+.modal2{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content2{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button2{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button2:hover ,
+.close-button2:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe3{
+    width: 100%;
+    height: 100%;
+}
+
+.modal3{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content3{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button3{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button3:hover ,
+.close-button3:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe5{
+    width: 100%;
+    height: 100%;
+}
+
+.modal5{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content5{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button5{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button5:hover ,
+.close-button5:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe6{
+    width: 100%;
+    height: 100%;
+}
+
+.modal6{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content6{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button6{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button6:hover ,
+.close-button6:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe7{
+    width: 100%;
+    height: 100%;
+}
+
+.modal7{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content7{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button7{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button7:hover ,
+.close-button7:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe8{
+    width: 100%;
+    height: 100%;
+}
+
+.modal8{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content8{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button8{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button8:hover ,
+.close-button8:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#trailerIframe9{
+    width: 100%;
+    height: 100%;
+}
+
+.modal9{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content9{
+    background-color:none;
+    margin: 15%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+    /* object-fit: cover; */
+}
+
+.close-button9{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 28px;
+    cursor: pointer;
+}
+
+.close-button9:hover ,
+.close-button9:focus {
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes button{
+    0%{background:  linear-gradient(0deg, #00bdff, #0079ff);
+    }
+    12%{background:  linear-gradient(45deg, #00bdff, #0079ff);
+    }
+    24%{background:  linear-gradient(95deg, #00bdff, #0079ff);
+    }
+    36%{background:  linear-gradient(145deg, #00bdff, #0079ff);
+    }
+    48%{background:  linear-gradient(195deg, #00bdff, #0079ff);
+    }
+    60%{background:  linear-gradient(245deg, #00bdff, #0079ff);
+    }
+    72%{background:  linear-gradient(295deg, #00bdff, #0079ff);
+    }
+    100%{background:  linear-gradient(360deg, #00bdff, #0079ff);
+    }
+}
+
+.featured-button{
+    object-fit: cover;
+}
+
+.movie-list-container{
+    padding: 0 20px;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow-y: auto;
+}
+
+.movie-list-wrapper::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+.movie-list-title{
+    font-weight: bold;
+    font-family: "Comic Relief", system-ui;
+}
+
+.movie-list{
+display: flex;
+height: 300px;
+align-items: center;
+padding-top: 1px;
+transform: translateX(0);
+transition: all 1s ease-in-out;
+}
+
+.movie-list-items{
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-items:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 20px;
+    opacity: 0.5;
+}
+
+.movie-list-items:hover .movie-list-item-title,
+.movie-list-items:hover .movie-list-item-desc,
+.movie-list-items:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+
+
+.movie-list-item-img{
+width: 270px;
+height: 200px;
+border-radius: 5%;
+object-fit: cover;
+transition: all 1s ease-in-out;
+}
+
+.movie-list-item-title{
+    background: color #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 0.1px;
+    left: 50px;
+    opacity: 0; 
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc{
+    background: color #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 35%;
+    left: 50px;
+    width: 230px;
+     opacity: 0;
+      transition: 1s all ease-in-out;
+}
+.movie-list-item-button{
+    padding: 10px;
+    background:  linear-gradient(90deg, #00bdff, #0079ff);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    border: none;
+    animation: button 1s linear infinite;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    color: gray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.container.active {
+    background-color: white;
+}
+
+.movie-list-title.active {
+    color: black;
+}
+
+
+.navbar-container.active {
+    color: black;
+    background-color: white;
+}
+
+.menu-list-items.active{
+    color:#151515;
+    background-color: white;
+   }
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+   transform: translateX(-20px);
+}
+
+.search_user input.active{
+    background-color: gray;
+}
+
+@media only screen and (max-width: 550px){
+    .menu-list-items{
+        display: none;
+    }
+}
